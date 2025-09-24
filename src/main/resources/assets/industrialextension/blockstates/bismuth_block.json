@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model" :"industrialextension:block/bismuth_block"
+    }
+  }
+}

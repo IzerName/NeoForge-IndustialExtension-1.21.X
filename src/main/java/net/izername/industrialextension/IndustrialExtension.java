@@ -1,5 +1,9 @@
 package net.izername.industrialextension;
 
+import net.izername.industrialextension.block.ModBlocks;
+import net.izername.industrialextension.item.ModCreativeModeTabs;
+import net.izername.industrialextension.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -30,6 +34,13 @@ public class IndustrialExtension {
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
+        // Регистрация модовой вкладки в творческом режиме
+        ModCreativeModeTabs.register(modEventBus);
+        // Регистрация модовых вещей
+        ModItems.register(modEventBus);
+        // Регистрация модовых блоков
+        ModBlocks.register(modEventBus);
+
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -39,6 +50,15 @@ public class IndustrialExtension {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.BISMUTH);
+            event.accept(ModItems.RAW_BISMUTH);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.BISMUTH_BLOCK);
+            event.accept(ModBlocks.BISMUTH_ORE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

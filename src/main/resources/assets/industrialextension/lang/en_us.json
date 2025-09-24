@@ -1,0 +1,10 @@
+{
+  "itemGroup.industrialextension": "Industrial Extension",
+  "item.industrialextension.bismuth": "Bismuth item",
+  "item.industrialextension.raw_bismuth": "Raw Bismuth item",
+  "block.industrialextension.bismuth_block": "Bismuth Block",
+  "block.industrialextension.bismuth_ore": "Bismuth Ore",
+  "block.industrialextension.bismuth_deepslate_ore": "Bismuth Deepslate Ore",
+  "creativetab.industrialextension.bismuth_items" : "Bismuth Items",
+  "creativetab.industrialextension.bismuth_blocks" : "Bismuth Blocks"
+}

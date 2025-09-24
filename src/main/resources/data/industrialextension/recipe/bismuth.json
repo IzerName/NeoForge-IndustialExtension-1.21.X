@@ -1,0 +1,13 @@
+{
+  "type" : "minecraft:crafting_shapeless",
+  "category" : "mics",
+  "ingredients": [
+    {
+      "item" : "industrialextension:bismuth_block"
+    }
+  ],
+  "result" : {
+    "count" : 9,
+    "id" : "industrialextension:bismuth"
+  }
+}

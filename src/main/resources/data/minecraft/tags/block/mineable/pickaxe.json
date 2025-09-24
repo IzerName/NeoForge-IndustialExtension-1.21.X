@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "industrialextension:bismuth_block",
+    "industrialextension:bismuth_ore",
+    "industrialextension:bismuth_deepslate_ore"
+  ]
+}
